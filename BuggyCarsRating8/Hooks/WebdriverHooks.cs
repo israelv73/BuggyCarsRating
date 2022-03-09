@@ -21,7 +21,6 @@ namespace BuggyCarsRating8.Hooks
         {
             this.container = container;
             browser = "chrome";
-            headless = false;
         }
 
         [BeforeScenario]
@@ -31,12 +30,6 @@ namespace BuggyCarsRating8.Hooks
             {
                 case "chrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
-
-                    if(headless)
-                    {
-                        chromeOptions.AddArgument("--headless");
-                        chromeOptions.AddArgument("--disable-gpu");
-                    }
 
                     chromeOptions.AddArgument("start-maximized");
                     driver = new ChromeDriver(chromeOptions);
