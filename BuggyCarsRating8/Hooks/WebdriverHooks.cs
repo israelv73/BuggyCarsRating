@@ -14,7 +14,6 @@ namespace BuggyCarsRating8.Hooks
     {
         private readonly IObjectContainer container;
         private string browser;
-        private bool headless;
         private IWebDriver driver;
 
         public WebdriverHooks(IObjectContainer container)

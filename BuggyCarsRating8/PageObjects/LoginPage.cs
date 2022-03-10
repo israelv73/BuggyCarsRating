@@ -20,6 +20,10 @@ namespace BuggyCarsRating8.PageObjects
         private By LoginButton = By.XPath("//button[@class='btn btn-success']");
         private By HiText = By.XPath("//li[@class='nav-item'][1]/span");
 
+        private By popularMakeLink = By.XPath("//div[@class='col-md-4'][1]/div[@class='card']/a/img[@class='img-fluid center-block']/@src");
+        private By popularModelLink = By.XPath("//div[@class='col-md-4'][2]/div[@class='card']/a/img[@class='img-fluid center-block']/@src");
+        private By overallRatingLink = By.XPath("//div[@class='col-md-4'][3]/div[@class='card']/a/img[@class='img-fluid center-block']/@src");
+
         public void LoginToBuggyCarsRating()
         {
             driver.FindElements(LoginField)[0].SendKeys(username);
@@ -33,6 +37,15 @@ namespace BuggyCarsRating8.PageObjects
             Assert.IsTrue(GreetingText.StartsWith(greetings),"Expected " + greetings + " , Actual: " + GreetingText);
         }
 
-        
+        public void ClickPopularModel()
+        {
+            driver.FindElement(popularModelLink).Click();
+        }
+
+        public void ClickOverallRating()
+        {
+            driver.FindElement(overallRatingLink);
+        }
+
     }
 }
