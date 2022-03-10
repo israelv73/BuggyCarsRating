@@ -6,4 +6,4 @@
 Scenario: Successful login
 	Given I open the home page
 	When I login with valid Login and Password
-	Then 'Hello' message is displayed
+	Then 'Hi' message is displayed

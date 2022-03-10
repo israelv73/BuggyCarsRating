@@ -29,7 +29,7 @@ namespace BuggyCarsRating8.PageObjects
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(driver.FindElements(popularMakeTable)[i].Text);
-            }                       
+            }
         }
     }
 }
