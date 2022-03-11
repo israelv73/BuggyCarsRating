@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Login - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\PopularMake - Copy.feature.cs" />
   </ItemGroup>
 
@@ -25,12 +26,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Features\VoteCar.feature.cs">
+      <DependentUpon>VoteCar.feature</DependentUpon>
+    </Compile>
     <Compile Update="Features\OverallRating.feature.cs">
       <DependentUpon>OverallRating.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\VoteCar.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\OverallRating.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>

@@ -18,6 +18,7 @@ namespace BuggyCarsRating8.PageObjects
         private By overallRatingLink = By.XPath("//div[@class='col-md-4'][3]/div[@class='card']/a");
         private By overallRatingMakeTable = By.XPath("//tbody/tr/td[2]");
         private By overallRatingModelTable = By.XPath("//tbody/tr/td[3]");
+        private By carToVote = By.XPath("//tbody/tr[3]/td[3]/a");
         
         public void ClickOverallRating()
         {
@@ -31,5 +32,11 @@ namespace BuggyCarsRating8.PageObjects
                 Console.WriteLine(driver.FindElements(overallRatingMakeTable)[i].Text + " " + driver.FindElements(overallRatingModelTable)[i].Text);
             }
         }
+
+        public void ClickCarToVote()
+        {
+            driver.FindElement(carToVote).Click();
+        }
+
     }
 }
