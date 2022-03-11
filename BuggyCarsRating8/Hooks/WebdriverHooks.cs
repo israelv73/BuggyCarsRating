@@ -4,7 +4,6 @@ using System.Text;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using Microsoft.Edge.SeleniumTools;
 using BoDi;
 
 namespace BuggyCarsRating8.Hooks
